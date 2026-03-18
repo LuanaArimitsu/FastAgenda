@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Agenda Fácil: agendamentos para profissionais autônomos com gestão de horários e notificações no WhatsApp."
+    />
+    <title>Agenda Fácil — Agendamentos com WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#topo" aria-label="Agenda Fácil (início)">
+          <span class="brand__mark" aria-hidden="true">AF</span>
+          <span class="brand__text">Agenda Fácil</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a class="nav__link" href="#como-funciona">Como funciona</a>
+          <a class="nav__link" href="#recursos">Recursos</a>
+          <a class="nav__link" href="#para-quem">Para quem</a>
+          <a class="nav__link" href="#leads">Contato</a>
+        </nav>
+
+        <div class="topbar__cta">
+          <a class="btn btn--ghost" href="#leads">Quero testar</a>
+          <button
+            id="menuBtn"
+            class="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span class="menu-btn__bar" aria-hidden="true"></span>
+            <span class="menu-btn__bar" aria-hidden="true"></span>
+            <span class="menu-btn__bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <div class="container mobile-menu__inner">
+          <a class="mobile-menu__link" href="#como-funciona">Como funciona</a>
+          <a class="mobile-menu__link" href="#recursos">Recursos</a>
+          <a class="mobile-menu__link" href="#para-quem">Para quem</a>
+          <a class="mobile-menu__link" href="#leads">Contato</a>
+          <a class="btn btn--primary mobile-menu__btn" href="#leads">Quero receber agendamentos</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="topo" class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="badge">
+              Notificações no WhatsApp • Gestão de horários • Cadastro de serviços
+            </p>
+            <h1>
+              Agendamentos simples para
+              <span class="text-gradient">profissionais autônomos</span>.
+            </h1>
+            <p class="lead">
+              O <strong>Agenda Fácil</strong> te ajuda a organizar sua agenda, divulgar seus serviços e receber
+              agendamentos com avisos diretos no WhatsApp — sem perder tempo respondendo mensagens.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#leads">Quero receber agendamentos</a>
+              <a class="btn btn--secondary" href="#como-funciona">Ver como funciona</a>
+            </div>
+            <div class="hero__proof" aria-label="Destaques">
+              <div class="proof">
+                <span class="proof__title">Configuração rápida</span>
+                <span class="proof__desc">Disponibilidade em poucos cliques</span>
+              </div>
+              <div class="proof">
+                <span class="proof__title">Feito pro autônomo</span>
+                <span class="proof__desc">Do salão ao consultório</span>
+              </div>
+              <div class="proof">
+                <span class="proof__title">WhatsApp</span>
+                <span class="proof__desc">Avisos instantâneos de agendamento</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__card" aria-label="Prévia da agenda">
+            <div class="ui-card">
+              <div class="ui-card__top">
+                <div class="ui-pill">Agenda do dia</div>
+                <div class="ui-date" id="todayDate">—</div>
+              </div>
+              <div class="ui-list" role="list">
+                <div class="ui-item" role="listitem">
+                  <div class="ui-item__time">09:00</div>
+                  <div class="ui-item__body">
+                    <div class="ui-item__title">Corte masculino</div>
+                    <div class="ui-item__meta">Cliente: João • Confirmado</div>
+                  </div>
+                  <div class="ui-tag ui-tag--ok">WhatsApp</div>
+                </div>
+                <div class="ui-item" role="listitem">
+                  <div class="ui-item__time">11:30</div>
+                  <div class="ui-item__body">
+                    <div class="ui-item__title">Manicure</div>
+                    <div class="ui-item__meta">Cliente: Maria • Pendente</div>
+                  </div>
+                  <div class="ui-tag ui-tag--warn">Novo</div>
+                </div>
+                <div class="ui-item" role="listitem">
+                  <div class="ui-item__time">15:00</div>
+                  <div class="ui-item__body">
+                    <div class="ui-item__title">Sobrancelha</div>
+                    <div class="ui-item__meta">Cliente: Ana • Confirmado</div>
+                  </div>
+                  <div class="ui-tag ui-tag--ok">Aviso</div>
+                </div>
+              </div>
+              <div class="ui-card__bottom">
+                <div class="ui-stat">
+                  <div class="ui-stat__label">Disponível hoje</div>
+                  <div class="ui-stat__value">2 horários</div>
+                </div>
+                <a class="ui-link" href="#leads">Ativar para mim →</a>
+              </div>
+            </div>
+            <div class="floating floating--a" aria-hidden="true">Gestão de horários</div>
+            <div class="floating floating--b" aria-hidden="true">Notificação no WhatsApp</div>
+            <div class="floating floating--c" aria-hidden="true">Cadastro de serviços</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="strip" aria-label="Benefícios rápidos">
+        <div class="container strip__grid">
+          <div class="strip__item">
+            <div class="strip__kpi">+Organização</div>
+            <div class="strip__text">Agenda sempre atualizada e fácil de visualizar</div>
+          </div>
+          <div class="strip__item">
+            <div class="strip__kpi">+Conversão</div>
+            <div class="strip__text">O cliente agenda sozinho, sem idas e vindas</div>
+          </div>
+          <div class="strip__item">
+            <div class="strip__kpi">+Controle</div>
+            <div class="strip__text">Você define horários, duração e intervalos</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Como funciona</h2>
+            <p class="section__sub">
+              Em poucos passos, você configura seus serviços e começa a receber agendamentos.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step__num">1</div>
+              <h3 class="step__title">Cadastre seus serviços</h3>
+              <p class="step__desc">
+                Unhas, cabelo, barba, estética, terapias, aulas… crie seu catálogo com nome e duração.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step__num">2</div>
+              <h3 class="step__title">Defina sua disponibilidade</h3>
+              <p class="step__desc">
+                Selecione os dias e horários em que você atende e deixe o sistema bloquear o resto.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step__num">3</div>
+              <h3 class="step__title">Receba agendamentos + WhatsApp</h3>
+              <p class="step__desc">
+                O cliente agenda e você recebe a notificação com os detalhes direto no WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recursos" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Recursos que economizam tempo</h2>
+            <p class="section__sub">Tudo que você precisa para parar de “se perder” na agenda.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>Gestão de horários</h3>
+              <p>Configure disponibilidade por dia, pausa, intervalo e duração por serviço.</p>
+            </article>
+            <article class="card">
+              <h3>Notificações no WhatsApp</h3>
+              <p>Receba alertas de novos agendamentos e confirmações, sem abrir painel.</p>
+            </article>
+            <article class="card">
+              <h3>Cadastro de serviços</h3>
+              <p>Organize seu catálogo e facilite para o cliente escolher o que quer.</p>
+            </article>
+            <article class="card">
+              <h3>Agenda centralizada</h3>
+              <p>Visualize o dia/semana e evite conflitos de horário com bloqueios automáticos.</p>
+            </article>
+            <article class="card">
+              <h3>Link de agendamento</h3>
+              <p>Compartilhe no Instagram, bio, WhatsApp e onde você divulga seus serviços.</p>
+            </article>
+            <article class="card">
+              <h3>Profissionalismo</h3>
+              <p>Cliente percebe organização: menos faltas e mais recorrência.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="para-quem" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Para quem é o Agenda Fácil?</h2>
+            <p class="section__sub">Se você atende com hora marcada, isso é pra você.</p>
+          </div>
+          <div class="audience">
+            <div class="audience__col">
+              <ul class="checklist">
+                <li>Manicure e pedicure</li>
+                <li>Barbeiro e cabeleireiro</li>
+                <li>Designer de sobrancelhas / estética</li>
+                <li>Massoterapeuta</li>
+              </ul>
+            </div>
+            <div class="audience__col">
+              <ul class="checklist">
+                <li>Personal trainer</li>
+                <li>Professor(a) particular</li>
+                <li>Terapeutas e atendimentos</li>
+                <li>Qualquer autônomo com agenda</li>
+              </ul>
+            </div>
+            <div class="audience__box">
+              <h3>Menos mensagens. Mais clientes.</h3>
+              <p>
+                Pare de perder tempo negociando horários. Deixe o cliente escolher o horário disponível
+                e você só confirma e atende.
+              </p>
+              <a class="btn btn--primary" href="#leads">Quero entrar na lista</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Perguntas frequentes</h2>
+            <p class="section__sub">Respostas rápidas antes de você deixar seu contato.</p>
+          </div>
+          <div class="faq" role="list">
+            <details class="faq__item" role="listitem">
+              <summary>Eu preciso instalar algum aplicativo?</summary>
+              <p>
+                Não. Você acessa pelo navegador. As notificações chegam no WhatsApp cadastrado.
+              </p>
+            </details>
+            <details class="faq__item" role="listitem">
+              <summary>Consigo configurar meus horários em poucos cliques?</summary>
+              <p>
+                Sim. A ideia é você escolher dias, horários e intervalos rapidamente, e o sistema monta a
+                disponibilidade automaticamente.
+              </p>
+            </details>
+            <details class="faq__item" role="listitem">
+              <summary>Meus clientes conseguem agendar sozinhos?</summary>
+              <p>
+                Sim. Você compartilha um link e o cliente escolhe um horário disponível e o serviço.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="leads" class="cta">
+        <div class="container cta__grid">
+          <div class="cta__copy">
+            <h2>Quer ser um dos primeiros a usar o Agenda Fácil?</h2>
+            <p class="cta__sub">
+              Deixe seus dados e conte quais serviços você oferece. Assim que a plataforma estiver pronta,
+              a gente te chama.
+            </p>
+            <ul class="mini">
+              <li>Cadastro de serviços</li>
+              <li>Gestão de horários</li>
+              <li>Notificações no WhatsApp</li>
+            </ul>
+            <div class="cta__actions">
+              <a class="btn btn--secondary" href="https://forms.gle/ECSknKmkMctrQ7ai8" target="_blank" rel="noreferrer">
+                Abrir formulário em nova aba
+              </a>
+            </div>
+          </div>
+
+          <div class="cta__form" aria-label="Formulário de captura de leads">
+            <div class="form-frame">
+              <div class="form-frame__top">
+                <span class="form-frame__title">Formulário</span>
+                <span class="form-frame__hint">Se não carregar, use o botão ao lado.</span>
+              </div>
+              <iframe
+                class="form-frame__iframe"
+                title="Formulário Agenda Fácil"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeZplbUQ_9h7o6EoV0yU3XyFQ0mZP3qz9gGd5b8Y0pB3d8G7Q/viewform?embedded=true"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <div class="brand brand--small">
+            <span class="brand__mark" aria-hidden="true">AF</span>
+            <span class="brand__text">Agenda Fácil</span>
+          </div>
+          <p class="footer__text">Agendamentos para profissionais autônomos com WhatsApp.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#leads">Contato</a>
+        </div>
+        <div class="footer__copy">
+          <span>© <span id="yearNow">—</span> Agenda Fácil</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
