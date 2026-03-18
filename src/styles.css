@@ -220,7 +220,7 @@ h1{
   border: 1px solid var(--border);
 }
 .ui-date{ color: var(--muted); font-weight:700; font-size:12px; }
-.ui-list{ display:grid; gap: 10px; }
+.ui-list{ display:grid; gap: 10px; margin-bottom: 20px;}
 .ui-item{
   display:grid;
   grid-template-columns: 56px 1fr auto;
