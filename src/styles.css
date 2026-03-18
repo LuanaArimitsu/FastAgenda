@@ -417,9 +417,10 @@ h2{
 }
 .cta__grid{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 18px;
-  align-items: start;
+  justify-items: center;
+  text-align: center;  
 }
 .cta__sub{ color: var(--muted); line-height:1.55; }
 .mini{
@@ -439,6 +440,7 @@ h2{
 }
 
 .form-frame{
+  max-width: 500px;
   border-radius: 22px;
   background: #fff;
   border: 1px solid var(--border);
